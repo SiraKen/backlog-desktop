@@ -4,11 +4,36 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "electron .",
+    "build": "electron-builder --dir"
+  },
+  "build": {
+    "appId": "net.siraken.backlog-cli",
+    "files": [
+      "package.json",
+      "main.js"
+    ],
+    "mac": {
+      "target": {
+        "target": "dir",
+        "arch": "universal"
+      },
+      "icon": "assets/icon.png"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^12.0.1"
+    "electron": "^12.0.1",
+    "electron-builder": "^22.10.5"
   }
 }
