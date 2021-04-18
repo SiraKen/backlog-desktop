@@ -19,11 +19,11 @@
         "target": "dir",
         "arch": "universal"
       },
-      "icon": "assets/icon.png"
+      "icon": "assets/backlog.png"
     },
     "win": {
       "target": "nsis",
-      "icon": "assets/icon.png"
+      "icon": "assets/backlog.png"
     },
     "nsis": {
       "oneClick": false,
